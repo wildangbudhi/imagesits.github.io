@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMAGESITS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    
+</head>
+<body>
+    <nav>
+        <div class="toggle">
+            <div class="logo">
+               <b>IMAGESITS</b> 
+            </div>
+            <img class="menu-bar" src="bars-solid.svg" width="10%">
+        </div>
+        <ul>
+            <a href="#wrapper">Home</a>
+            <a href="#">About Us</a>
+            <a href="#struktur">Struktural</a>
+            <a href="#">Contact Us</a>
+        </ul>
+    </nav>
+
+    <section id="wrapper">
+        <div class="inner">
+            <div class="content">
+                <img class="logo" src="logo.png" width="300" height="300">
+                <h1>IMAGESITS</h1>
+                <h3>Ikatan Mahasiswa Gresik ITS</h3>
+                <a type="button" class="btn btn-primary" href="#struktur">Learn More</a>
+                <a type="button" class="btn btn-primary" href="#struktur">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="struktur">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="wildan.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Wildan G. Budhi</h5>
+                    <p class="card-text">Wildan Ghiffarie Budhi</p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="wildan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wildan G. Budhi</h5>
+                        <p class="card-text">Wildan Ghiffarie Budhi</p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+            </div>
+        
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="wildan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wildan G. Budhi</h5>
+                        <p class="card-text">Wildan Ghiffarie Budhi</p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+            </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-bar').click(function(){
+                $('ul').toggleClass('active')
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("nav").hide();
+
+            $(function () {
+                $(window).scroll(function () {
+
+             // set distance user needs to scroll before we start fadeIn
+                    if ($(this).scrollTop() > 0) {
+                        $('nav').fadeIn();
+                    } else {
+                        $('nav').fadeOut();
+                    }
+                });
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
