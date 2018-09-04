@@ -179,5 +179,15 @@ ul a:hover{
         display: block;
     }
 
+    #footer .lokasi iframe , #footer .ig iframe{
+        width: 60%;
+        height: 60%;
+        min-width: 290px;
+        min-height: 290px;
+    }
+
+    #footer .lokasi , #footer .ig{
+        margin-top: 5%;
+    }
     
 }
